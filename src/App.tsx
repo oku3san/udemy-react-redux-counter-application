@@ -1,11 +1,10 @@
 import React from 'react';
 
 function App() {
-  return (
-    <h1>
-      Hello, world!
-    </h1>
-  );
+  const greeting = 'Hi, Tom!';
+  const dom = <h1 className="foo">{greeting}</h1>;
+
+  return dom;
 }
 
 export default App;
