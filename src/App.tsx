@@ -1,49 +1,25 @@
 import React from 'react';
 
-// function App() {
-//   return (
-//     <>
-//       <label htmlFor="bar">
-//         bar
-//         <input
-//           type="text"
-//           onChange={() => {
-//             console.log('I am clicked');
-//           }}
-//         />
-//       </label>
-//     </>
-//   );
-// }
-
-// const App = () => {
-//   return (
-//     <div>
-//       <Cat />
-//       <Cat />
-//       <Cat />
-//       <Cat />
-//     </div>
-//   );
-// };
-//
-// const Cat = () => {
-//   return <div>Meow!</div>;
-// };
-
 function App() {
   return (
     <div>
-      <Cat />
-      <Cat />
-      <Cat />
-      <Cat />
+      <User name="Taro" />
     </div>
   );
 }
 
-function Cat() {
-  return <div>Meow!</div>;
-}
+type Props = {
+  name: string;
+};
+
+const User: React.FC<Props> = (props) => {
+  const { name } = props;
+
+  return (
+    <>
+      <p>{name}!</p>
+    </>
+  );
+};
 
 export default App;
