@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
+import CounterBoard from './containers/CounterBoard';
 
-function App() {
-  return (
-    <h1>
-      Hello, world!
-    </h1>
-  );
-}
+// containers/CounterBoard を呼び出している
+const App: FC = () => (
+  <div>
+    <header>
+      <h1>ビーズカウンター</h1>
+    </header>
+    <CounterBoard />
+  </div>
+);
 
 export default App;
